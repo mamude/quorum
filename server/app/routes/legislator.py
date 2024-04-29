@@ -1,14 +1,8 @@
-from functools import lru_cache
-
-from app.settings import Settings
-from fastapi import APIRouter, Depends
-from typing_extensions import Annotated
-
-
-@lru_cache
-def get_settings():
-    return Settings()
-
+from app.domains.models import Legislator
+from app.services.csv_readers import get_data_legislators
+from fastapi import APIRouter
+from fastapi.encoders import jsonable_encoder
+from fastapi.responses import UJSONResponse
 
 router = APIRouter(
     prefix="/api/legislator",
@@ -17,6 +11,7 @@ router = APIRouter(
 )
 
 
-@router.get("/")
-async def get_legislators(settings: Annotated[Settings, Depends(get_settings)]):
-    return {"legislator": []}
+@router.get("/", response_model=Legislator, response_class=UJSONResponse)
+def get_legislators():
+    data = jsonable_encoder(get_data_legislators())
+    return UJSONResponse(data)
