@@ -6,6 +6,7 @@ PYTHON = $(VENV)/bin/python3
 PIP = $(VENV)/bin/pip
 ISORT = $(VENV)/bin/isort
 BLACK = $(VENV)/bin/black
+JUPYTER = $(VENV)/bin/jupyter
 
 clean:	
 	@find . -name "__pycache__" -type d | xargs rm -rf	
@@ -21,6 +22,9 @@ install: build-env install-dev
 
 run:	
 	$(PYTHON) app/main.py
+
+jupyter:
+	$(JUPYTER) lab
 
 isort:
 	$(ISORT) .
