@@ -1,4 +1,5 @@
 import uvicorn
+from app.routes.bill_v1 import router as bill_router_v1
 from app.routes.legislator_v1 import router as legislator_router_v1
 from app.routes.legislator_v2 import router as legislator_router_v2
 from fastapi import FastAPI
@@ -12,6 +13,7 @@ def index():
     return RedirectResponse("/docs/")
 
 
+app.include_router(bill_router_v1)
 app.include_router(legislator_router_v1)
 app.include_router(legislator_router_v2)
 
