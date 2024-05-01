@@ -5,7 +5,7 @@ from fastapi.encoders import jsonable_encoder
 from fastapi.responses import UJSONResponse
 
 router = APIRouter(
-    prefix="/api/v2/legislator",
+    prefix="/api/v2/legislators",
     tags=["legislators"],
     responses={404: {"description": "not found"}},
 )
