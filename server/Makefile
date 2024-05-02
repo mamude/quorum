@@ -7,6 +7,8 @@ PIP = $(VENV)/bin/pip
 ISORT = $(VENV)/bin/isort
 BLACK = $(VENV)/bin/black
 JUPYTER = $(VENV)/bin/jupyter
+PYTEST = $(VENV)/bin/pytest
+COVERAGE = $(VENV)/bin/coverage 
 
 clean:	
 	@find . -name "__pycache__" -type d | xargs rm -rf	
@@ -26,10 +28,19 @@ run:
 jupyter:
 	$(JUPYTER) lab
 
-isort:
-	$(ISORT) .
-
 black:
 	$(BLACK) .
+
+test:
+	$(PYTEST)
+
+coverage:
+	$(COVERAGE) run -m pytest
+
+coverage-report:
+	$(COVERAGE) report -m
+
+coverage-html:
+	$(COVERAGE) html
 
 

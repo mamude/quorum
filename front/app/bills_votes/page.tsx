@@ -41,7 +41,7 @@ export default async function BillsVotesPage() {
                 <TableCell>{l.id}</TableCell>
                 <TableCell>{l.bill}</TableCell>
                 <TableCell>{l.supporters}</TableCell>
-                <TableCell>{l.opposors}</TableCell>
+                <TableCell>{l.opposers}</TableCell>
                 <TableCell>{l.primary_sponsor}</TableCell>
               </TableRow>
             ))}

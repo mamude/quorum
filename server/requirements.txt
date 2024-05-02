@@ -15,6 +15,7 @@ cffi==1.16.0
 charset-normalizer==3.3.2
 click==8.1.7
 comm==0.2.2
+coverage==7.5.0
 debugpy==1.8.1
 decorator==5.1.1
 defusedxml==0.7.1
@@ -27,6 +28,7 @@ httpcore==1.0.5
 httptools==0.6.1
 httpx==0.27.0
 idna==3.7
+iniconfig==2.0.0
 ipykernel==6.29.4
 ipython==8.24.0
 isoduration==20.11.0
@@ -64,6 +66,7 @@ parso==0.8.4
 pathspec==0.12.1
 pexpect==4.9.0
 platformdirs==4.2.1
+pluggy==1.5.0
 prometheus_client==0.20.0
 prompt-toolkit==3.0.43
 psutil==5.9.8
@@ -74,6 +77,7 @@ pydantic==2.7.1
 pydantic-settings==2.2.1
 pydantic_core==2.18.2
 Pygments==2.17.2
+pytest==8.2.0
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
 python-json-logger==2.0.7

@@ -93,7 +93,7 @@ def get_data_bills_votes():
                 id=row[0][0],
                 bill=row[0][1],
                 supporters=supporters.mean(),
-                opposors=opposers.mean(),
+                opposers=opposers.mean(),
                 primary_sponsor=row[0][2],
             )
         )

@@ -23,5 +23,5 @@ class BillVotes(BaseModel):
     id: int
     bill: str
     supporters: int
-    opposors: int
+    opposers: int
     primary_sponsor: int
